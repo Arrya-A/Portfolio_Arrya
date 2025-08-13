@@ -129,7 +129,7 @@ const Header = () => {
                   }`}
                   onClick={toggleMenu}
                 >
-                  Our Projects
+                  Skills
                 </Link>
                 <Link
                   to="/projects"
@@ -138,7 +138,7 @@ const Header = () => {
                   }`}
                   onClick={toggleMenu}
                 >
-                  Products
+                  Projects
                 </Link>
                 <Link
                   to="/contact"
@@ -147,7 +147,7 @@ const Header = () => {
                   }`}
                   onClick={toggleMenu}
                 >
-                  Contact Us
+                  Contact
                 </Link>
               </>
             </div>

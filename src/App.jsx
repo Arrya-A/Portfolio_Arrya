@@ -6,11 +6,13 @@ import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Header from "./components/Header";
 import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
       <Header />
+      {/* <Footer/> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
