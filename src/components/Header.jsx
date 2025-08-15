@@ -120,7 +120,7 @@ const Header = () => {
                   }`}
                   onClick={toggleMenu}
                 >
-                  About Us
+                  About Me
                 </Link>
                 <Link
                   to="/skills"
