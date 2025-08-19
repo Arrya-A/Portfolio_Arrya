@@ -1,36 +1,122 @@
-import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { faGithubSquare } from "@fortawesome/free-brands-svg-icons";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-const Contact = () => {
+import Img1 from "../assets/images/moviesearch.png";
+const Projects = () => {
+  const projects = [
+    {
+      name: "sample 1",
+      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+      live_link: "https://www.google.com/",
+      github_link: "https://github.com/",
+    },
+    {
+      name: "sample 2",
+      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+      live_link: "https://www.google.com/",
+      github_link: "https://github.com/",
+    },
+    {
+      name: "sample 3",
+      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+      live_link: "https://www.google.com/",
+      github_link: "https://github.com/",
+    },
+    {
+      name: "sample 4",
+      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+      live_link: "https://www.google.com/",
+      github_link: "https://github.com/",
+    },
+  ];
   return (
     <>
-      <div className="min-h-[100vh] flex items-center justify-center">
-        <div className="grid grid-cols-2">
-          <div className="p-4">
-            <p className="text-2xl">Hi,</p>
-            <p className="text-2xl">I'm Arrya A</p>
-            <p className="text-2xl">MERN Developer</p>
-            <a
-              href="./images/Arrya_Resume.pdf"
-              download
-              className="inline-flex items-center px-4 py-2 bg-stone-200 text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 mb-5"
-            >
-              DOWNLOAD CV{" "}
-              <FontAwesomeIcon icon={faFileArrowDown} className="ml-2" />
-            </a>
+      <h3 className="text-center text-xl text-emerald-500 pt-4">Projects</h3>
+      <div className="md:mx-36">
+        <div className="grid grid-cols-1 md:grid-cols-3">
+          <div className="bg-stone-200 p-4 rounded shadow m-4 hover:scale-105 transition ">
+            <div className="pb-2">
+              <img className="rounded" src={Img1} alt="" />
+            </div>
+            <div>
+              <h5>Title</h5>
+              <h3>Description</h3>
+              <button
+                type="button"
+                className="px-2 shadow-xl p-1 rounded bg-stone-100 "
+              >
+                <FontAwesomeIcon icon={faLink} />
+              </button>
+              <button
+                type="button"
+                className="ms-2 px-2 shadow-xl p-1 rounded bg-stone-100 "
+              >
+                <FontAwesomeIcon icon={faGithubSquare} />
+              </button>
+            </div>
           </div>
-          <div className="p-4">
-            <p className="text-2xl">Hi,</p>
-            <p className="text-2xl">I'm Arrya A</p>
-            <p className="text-2xl">MERN Developer</p>
-            <a
-              href="./images/Arrya_Resume.pdf"
-              download
-              className="inline-flex items-center px-4 py-2 bg-stone-200 text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200 mb-5"
-            >
-              DOWNLOAD CV{" "}
-              <FontAwesomeIcon icon={faFileArrowDown} className="ml-2" />
-            </a>
+          <div className="bg-stone-200 p-4 rounded shadow m-4 hover:scale-105 transition ">
+            <div className="pb-2">
+              <img className="rounded" src={Img1} alt="" />
+            </div>
+            <div>
+              <h5>Title</h5>
+              <h3>Description</h3>
+              <button
+                type="button"
+                className="px-2 shadow-xl p-1 rounded bg-stone-100 "
+              >
+                <FontAwesomeIcon icon={faLink} />
+              </button>
+              <button
+                type="button"
+                className="ms-2 px-2 shadow-xl p-1 rounded bg-stone-100 "
+              >
+                <FontAwesomeIcon icon={faGithubSquare} />
+              </button>
+            </div>
+          </div>
+          <div className="bg-stone-200 p-4 rounded shadow m-4 hover:scale-105 transition ">
+            <div className="pb-2">
+              <img className="rounded" src={Img1} alt="" />
+            </div>
+            <div>
+              <h5>Title</h5>
+              <h3>Description</h3>
+              <button
+                type="button"
+                className="px-2 shadow-xl p-1 rounded bg-stone-100 "
+              >
+                <FontAwesomeIcon icon={faLink} />
+              </button>
+              <button
+                type="button"
+                className="ms-2 px-2 shadow-xl p-1 rounded bg-stone-100 "
+              >
+                <FontAwesomeIcon icon={faGithubSquare} />
+              </button>
+            </div>
+          </div>
+          <div className="bg-stone-200 p-4 rounded shadow m-4 hover:scale-105 transition ">
+            <div className="pb-2">
+              <img className="rounded" src={Img1} alt="" />
+            </div>
+            <div>
+              <h5>Title</h5>
+              <h3>Description</h3>
+              <button
+                type="button"
+                className="px-2 shadow-xl p-1 rounded bg-stone-100 "
+              >
+                <FontAwesomeIcon icon={faLink} />
+              </button>
+              <button
+                type="button"
+                className="ms-2 px-2 shadow-xl p-1 rounded bg-stone-100 "
+              >
+                <FontAwesomeIcon icon={faGithubSquare} />
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -38,4 +124,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Projects;

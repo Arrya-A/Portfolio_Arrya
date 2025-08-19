@@ -21,13 +21,13 @@ const Header = () => {
         <ul className="hidden md:flex space-x-6 absolute left-1/2 -translate-x-1/2">
           <li>
             <Link
-              to="/home"
+              to="/"
               className={`relative ${
-                currentTab === "/home" ? "text-emerald-500" : ""
+                currentTab === "/" ? "text-emerald-500" : ""
               }`}
             >
               Home
-              {currentTab === "/home" && (
+              {currentTab === "/" && (
                 <span className="absolute left-0 bottom-0 w-6 border-b-2 border-emerald-500"></span>
               )}
             </Link>
@@ -105,9 +105,9 @@ const Header = () => {
             <div className="md:hidden flex flex-col items-center bg-stone-200 py-4 space-y-4 text-sm font-medium">
               <>
                 <Link
-                  to="/home"
+                  to="/"
                   className={`relative ${
-                    currentTab === "/home" ? "text-emerald-500" : ""
+                    currentTab === "/" ? "text-emerald-500" : ""
                   }`}
                   onClick={toggleMenu}
                 >
