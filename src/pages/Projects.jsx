@@ -224,7 +224,7 @@ const Projects = () => {
           {projects.map((project, idx) => (
             <div
               key={idx}
-              className="bg-white/80 backdrop-blur-xl border border-stone-200/80 p-5 rounded-[2rem] shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col justify-between"
+              className="bg-gradient-to-b from-white/95 via-white/85 to-stone-50/90 backdrop-blur-xl border border-stone-200/80 p-5 rounded-[1rem] shadow-sm hover:shadow-xl border-emerald-300 from-white to-emerald-50/30 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
             >
               <div className="pb-2">
                 <img className="rounded" src={project?.image} alt="" />
