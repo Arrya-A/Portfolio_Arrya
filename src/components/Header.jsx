@@ -1,11 +1,13 @@
-import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faX, faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useTheme } from "../context/ThemeContext";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const { toggleTheme, isDarkMode } = useTheme();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -58,10 +60,10 @@ const Header = () => {
 
   return (
     <header className="sticky top-4 z-50 px-4 w-full flex justify-center">
-      <nav className="bg-white/85 backdrop-blur-xl border border-stone-200/80 shadow-lg shadow-stone-900/5 rounded-full px-4 sm:px-6 py-2 flex items-center justify-between gap-4 md:gap-8 transition-all">
+      <nav className="bg-white/85 dark:bg-stone-900/85 backdrop-blur-xl border border-stone-200/80 dark:border-stone-800 shadow-lg shadow-stone-900/5 dark:shadow-black/20 rounded-full px-4 sm:px-6 py-2 flex items-center justify-between gap-4 md:gap-8 transition-all duration-300">
         <div
           id="brand"
-          className="text-lg font-bold text-stone-900 px-2 cursor-pointer"
+          className="text-lg font-bold text-stone-900 dark:text-stone-100 px-2 cursor-pointer"
           onClick={(e) => scrollToSection(e, "home")}
         >
           Portfolio
@@ -75,8 +77,8 @@ const Header = () => {
                 onClick={(e) => scrollToSection(e, item.id)}
                 className={`inline-block px-4 py-1.5 rounded-full text-sm transition-all duration-300 ${
                   activeSection === item.id
-                    ? "bg-stone-200/90 font-semibold text-stone-900 shadow-sm"
-                    : "text-stone-600 font-medium hover:text-stone-900 hover:bg-stone-100/60"
+                    ? "bg-stone-200/90 dark:bg-stone-800 font-semibold text-stone-900 dark:text-emerald-400 shadow-sm"
+                    : "text-stone-600 dark:text-stone-400 font-medium hover:text-stone-900 dark:hover:text-stone-100 hover:bg-stone-100/60 dark:hover:bg-stone-800/60"
                 }`}
               >
                 {item.label}
@@ -85,14 +87,33 @@ const Header = () => {
           ))}
         </ul>
 
-        {/* Mobile menu button */}
-        <div className="md:hidden">
+        {/* Right controls: Theme toggle & Mobile menu button */}
+        <div className="flex items-center gap-2">
+          {/* Dark/Light Mode Toggle Button */}
           <button
-            onClick={toggleMenu}
-            className="w-8 h-8 flex items-center justify-center rounded-full bg-stone-100 text-stone-700 hover:bg-stone-200 transition"
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+            title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+            className="w-9 h-9 flex items-center justify-center rounded-full bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-amber-400 hover:bg-stone-200 dark:hover:bg-stone-700 transition duration-300 cursor-pointer shadow-sm"
           >
-            <FontAwesomeIcon icon={isOpen ? faX : faBars} className="text-sm" />
+            <FontAwesomeIcon
+              icon={isDarkMode ? faSun : faMoon}
+              className="text-sm"
+            />
           </button>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="w-9 h-9 flex items-center justify-center rounded-full bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-200 hover:bg-stone-200 dark:hover:bg-stone-700 transition"
+            >
+              <FontAwesomeIcon
+                icon={isOpen ? faX : faBars}
+                className="text-sm"
+              />
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -103,7 +124,7 @@ const Header = () => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
-            className="bg-white/95 backdrop-blur-xl rounded-3xl border border-stone-200/80 p-4 shadow-xl flex flex-col space-y-2 text-center"
+            className="bg-white/95 dark:bg-stone-900/95 backdrop-blur-xl rounded-3xl border border-stone-200/80 dark:border-stone-800 p-4 shadow-xl flex flex-col space-y-2 text-center"
           >
             {navItems.map((item) => (
               <a
@@ -111,8 +132,8 @@ const Header = () => {
                 href={`#${item.id}`}
                 className={`py-2 px-4 rounded-full text-sm font-medium transition ${
                   activeSection === item.id
-                    ? "bg-stone-200/90 text-stone-900 font-semibold"
-                    : "text-stone-600 hover:bg-stone-100"
+                    ? "bg-stone-200/90 dark:bg-stone-800 text-stone-900 dark:text-emerald-400 font-semibold"
+                    : "text-stone-600 dark:text-stone-400 hover:bg-stone-100 dark:hover:bg-stone-800 dark:hover:text-stone-100"
                 }`}
                 onClick={(e) => {
                   scrollToSection(e, item.id);

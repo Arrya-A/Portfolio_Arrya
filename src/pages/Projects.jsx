@@ -216,7 +216,7 @@ const Projects = () => {
   ];
   return (
     <section className="px-6 py-12 md:px-16 lg:px-24 max-w-7xl mx-auto bg-transparent">
-      <h2 className="text-4xl sm:text-5xl font-bold text-center tracking-tight text-stone-900 mb-8">
+      <h2 className="text-4xl sm:text-5xl font-bold text-center tracking-tight text-stone-900 dark:text-stone-100 mb-8">
         Projects
       </h2>
       <div>
@@ -224,40 +224,49 @@ const Projects = () => {
           {projects.map((project, idx) => (
             <div
               key={idx}
-              className="bg-gradient-to-b from-white/95 via-white/85 to-stone-50/90 backdrop-blur-xl border border-stone-200/80 p-5 rounded-[1rem] shadow-sm hover:shadow-xl border-emerald-300 from-white to-emerald-50/30 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+              className="bg-gradient-to-b from-white/95 via-white/85 to-stone-50/90 dark:from-stone-900/95 dark:via-stone-900/85 dark:to-stone-950/90 backdrop-blur-xl border border-stone-200/80 dark:border-stone-800 p-5 rounded-[1rem] shadow-sm hover:shadow-xl dark:hover:shadow-stone-950/50 hover:border-emerald-300 dark:hover:border-emerald-700 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
             >
               <div className="pb-2">
                 <img className="rounded" src={project?.image} alt="" />
               </div>
               <div>
-                <h5 className="text-sm mb-1">{project?.name}</h5>
+                <h5 className="text-sm font-semibold text-stone-900 dark:text-stone-100 mb-1">
+                  {project?.name}
+                </h5>
                 <div className="flex flex-wrap gap-2 mb-2">
-                  {project.tech_stack.map((tech) => (
-                    <span
-                      key={tech}
-                      className="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                  {project.tech_stack.map(
+                    (tech, tIdx) =>
+                      tech.trim() !== "" && (
+                        <span
+                          key={tIdx}
+                          className="inline-flex items-center rounded-md bg-green-50 dark:bg-emerald-950/60 px-2 py-1 text-xs font-medium text-green-700 dark:text-emerald-300 border border-green-200/50 dark:border-emerald-800/60"
+                        >
+                          {tech}
+                        </span>
+                      ),
+                  )}
                 </div>
-                <h5 className="text-sm mb-2">{project?.description}</h5>
-                <a
-                  href={project.live_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-2 shadow-xl p-1 rounded bg-stone-100 inline-block"
-                >
-                  <FontAwesomeIcon icon={faLink} />
-                </a>
-                <a
-                  href={project.github_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="ms-2 px-2 shadow-xl p-1 rounded bg-stone-100 "
-                >
-                  <FontAwesomeIcon icon={faGithubSquare} />
-                </a>
+                <p className="text-sm text-stone-600 dark:text-stone-400 mb-3">
+                  {project?.description}
+                </p>
+                <div className="flex items-center">
+                  <a
+                    href={project.live_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-2 shadow-md p-1 rounded bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-700 hover:text-emerald-600 dark:hover:text-emerald-400 inline-block transition"
+                  >
+                    <FontAwesomeIcon icon={faLink} />
+                  </a>
+                  <a
+                    href={project.github_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ms-2 px-2 shadow-md p-1 rounded bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-700 hover:text-emerald-600 dark:hover:text-emerald-400 inline-block transition"
+                  >
+                    <FontAwesomeIcon icon={faGithubSquare} />
+                  </a>
+                </div>
               </div>
             </div>
           ))}

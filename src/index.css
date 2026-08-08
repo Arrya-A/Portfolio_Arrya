@@ -5,6 +5,9 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 body {
@@ -12,4 +15,13 @@ body {
   background-attachment: fixed;
   min-height: 100vh;
   color: #1c1917;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+html.dark body {
+  background: linear-gradient(135deg, #09090b 0%, #171717 45%, #052e16 100%);
+  background-attachment: fixed;
+  color: #f3f4f6;
 }

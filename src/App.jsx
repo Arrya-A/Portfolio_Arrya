@@ -7,10 +7,11 @@ import Header from "./components/Header";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import Experience from "./pages/Experience";
+import { ThemeProvider } from "./context/ThemeContext";
 
 function App() {
   return (
-    <>
+    <ThemeProvider>
       <Header />
       {/* <Footer/> */}
       <main>
@@ -33,7 +34,7 @@ function App() {
           <Contact />
         </section>
       </main>
-    </>
+    </ThemeProvider>
   );
 }
 
