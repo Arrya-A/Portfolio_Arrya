@@ -18,7 +18,7 @@ import vscode from "../../src/assets/images/vscode.png";
 const Skills = () => {
   return (
     <>
-      <div className="min-h-[89vh] w-[100vw] bg-white">
+      <div className="min-h-[89vh] w-full bg-transparent">
         <div className="p-4 m-8 md:p-20 md:m-20 rounded bg-stone-200">
           <div className="flex flex-wrap justify-center">
             <div className="group bg-stone-100 rounded-2xl p-4 m-4 text-center w-32 h-24">

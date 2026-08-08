@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <section className="relative min-h-[89vh] overflow-hidden bg-[#f7f4ee] px-6 py-12 md:px-16 lg:px-24">
+    <section className="relative min-h-[89vh] overflow-hidden bg-transparent px-6 py-12 md:px-16 lg:px-24">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -left-10 top-0 h-56 w-56 rounded-full bg-emerald-200/50 blur-3xl" />
         <div className="absolute bottom-0 right-0 h-64 w-64 rounded-full bg-sky-200/40 blur-3xl" />
@@ -15,7 +15,8 @@ const About = () => {
               About Me
             </div>
             <h1 className="max-w-4xl text-3xl font-semibold leading-tight text-stone-950 transition-all duration-300 sm:text-4xl lg:text-5xl">
-              Crafting polished web experiences with design-led React development.
+              Crafting polished web experiences with design-led React
+              development.
             </h1>
             <p className="mt-5 max-w-3xl text-base leading-8 text-stone-600 md:text-lg">
               I am a frontend developer with 1.5+ years of experience building

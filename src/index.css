@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background: linear-gradient(135deg, #f8f5ee 0%, #f3efe7 45%, #eef7f1 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: #1c1917;
+}

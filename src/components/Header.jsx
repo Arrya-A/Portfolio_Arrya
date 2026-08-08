@@ -1,18 +1,54 @@
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
-  const currentTab = location.pathname;
+  const [activeSection, setActiveSection] = useState("home");
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = [
+        "home",
+        "about",
+        "experience",
+        "skills",
+        "projects",
+        "contact",
+      ];
+      const scrollPosition = window.scrollY + 120;
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i]);
+        if (section) {
+          const sectionTop = section.offsetTop;
+          if (scrollPosition >= sectionTop) {
+            setActiveSection(sections[i]);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToSection = (e, sectionId) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setActiveSection(sectionId);
+    }
+  };
+
   return (
-    <div className="sticky top-0 left-0 right-0 z-50 bg-stone-200 px-6">
+    <div className="sticky top-0 left-0 right-0 z-50 bg-stone-200/90 backdrop-blur-md px-6">
       <div className="flex justify-between py-4">
         <div id="brand" className="text-2xl font-bold">
           Portfolio
@@ -20,69 +56,74 @@ const Header = () => {
 
         <ul className="hidden md:flex space-x-6 absolute left-1/2 -translate-x-1/2">
           <li>
-            <Link
-              to="/"
+            <a
+              href="#home"
+              onClick={(e) => scrollToSection(e, "home")}
               className={`relative ${
-                currentTab === "/" ? "text-emerald-500" : ""
+                activeSection === "home" ? "text-emerald-500" : ""
               }`}
             >
               Home
-              {currentTab === "/" && (
+              {activeSection === "home" && (
                 <span className="absolute left-0 bottom-0 w-6 border-b-2 border-emerald-500"></span>
               )}
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to="/about"
+            <a
+              href="#about"
+              onClick={(e) => scrollToSection(e, "about")}
               className={`relative ${
-                currentTab === "/about" ? "text-emerald-500" : ""
+                activeSection === "about" ? "text-emerald-500" : ""
               }`}
             >
               About Me
-              {currentTab === "/about" && (
+              {activeSection === "about" && (
                 <span className="absolute left-0 bottom-0 w-6 border-b-2 border-emerald-500"></span>
               )}
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to="/skills"
+            <a
+              href="#skills"
+              onClick={(e) => scrollToSection(e, "skills")}
               className={`relative ${
-                currentTab === "/skills" ? "text-emerald-500" : ""
+                activeSection === "skills" ? "text-emerald-500" : ""
               }`}
             >
               Skills
-              {currentTab === "/skills" && (
+              {activeSection === "skills" && (
                 <span className="absolute left-0 bottom-0 w-6 border-b-2 border-emerald-500"></span>
               )}
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to="/projects"
+            <a
+              href="#projects"
+              onClick={(e) => scrollToSection(e, "projects")}
               className={`relative ${
-                currentTab === "/projects" ? "text-emerald-500" : ""
+                activeSection === "projects" ? "text-emerald-500" : ""
               }`}
             >
               Projects
-              {currentTab === "/projects" && (
+              {activeSection === "projects" && (
                 <span className="absolute left-0 bottom-0 w-6 border-b-2 border-emerald-500"></span>
               )}
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to="/contact"
+            <a
+              href="#contact"
+              onClick={(e) => scrollToSection(e, "contact")}
               className={`relative ${
-                currentTab === "/contact" ? "text-emerald-500" : ""
+                activeSection === "contact" ? "text-emerald-500" : ""
               }`}
             >
               Contact Me
-              {currentTab === "/contact" && (
+              {activeSection === "contact" && (
                 <span className="absolute left-0 bottom-0 w-6 border-b-2 border-emerald-500"></span>
               )}
-            </Link>
+            </a>
           </li>
         </ul>
 
@@ -104,51 +145,66 @@ const Header = () => {
           >
             <div className="md:hidden flex flex-col items-center bg-stone-200 py-4 space-y-4 text-sm font-medium">
               <>
-                <Link
-                  to="/"
+                <a
+                  href="#home"
                   className={`relative ${
-                    currentTab === "/" ? "text-emerald-500" : ""
+                    activeSection === "home" ? "text-emerald-500" : ""
                   }`}
-                  onClick={toggleMenu}
+                  onClick={(e) => {
+                    scrollToSection(e, "home");
+                    toggleMenu();
+                  }}
                 >
                   Home
-                </Link>
-                <Link
-                  to="/about"
+                </a>
+                <a
+                  href="#about"
                   className={`relative ${
-                    currentTab === "/about" ? "text-emerald-500" : ""
+                    activeSection === "about" ? "text-emerald-500" : ""
                   }`}
-                  onClick={toggleMenu}
+                  onClick={(e) => {
+                    scrollToSection(e, "about");
+                    toggleMenu();
+                  }}
                 >
                   About Me
-                </Link>
-                <Link
-                  to="/skills"
+                </a>
+                <a
+                  href="#skills"
                   className={`relative ${
-                    currentTab === "/skills" ? "text-emerald-500" : ""
+                    activeSection === "skills" ? "text-emerald-500" : ""
                   }`}
-                  onClick={toggleMenu}
+                  onClick={(e) => {
+                    scrollToSection(e, "skills");
+                    toggleMenu();
+                  }}
                 >
                   Skills
-                </Link>
-                <Link
-                  to="/projects"
+                </a>
+                <a
+                  href="#projects"
                   className={`relative ${
-                    currentTab === "/projects" ? "text-emerald-500" : ""
+                    activeSection === "projects" ? "text-emerald-500" : ""
                   }`}
-                  onClick={toggleMenu}
+                  onClick={(e) => {
+                    scrollToSection(e, "projects");
+                    toggleMenu();
+                  }}
                 >
                   Projects
-                </Link>
-                <Link
-                  to="/contact"
+                </a>
+                <a
+                  href="#contact"
                   className={`relative ${
-                    currentTab === "/contact" ? "text-emerald-500" : ""
+                    activeSection === "contact" ? "text-emerald-500" : ""
                   }`}
-                  onClick={toggleMenu}
+                  onClick={(e) => {
+                    scrollToSection(e, "contact");
+                    toggleMenu();
+                  }}
                 >
                   Contact
-                </Link>
+                </a>
               </>
             </div>
           </motion.div>
