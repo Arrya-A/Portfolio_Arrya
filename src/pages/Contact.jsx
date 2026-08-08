@@ -2,7 +2,8 @@ import { faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Img1 from "../assets/images/moviesearch.png";
-const Projects = () => {
+
+const Contact = () => {
   const projects = [
     {
       name: "sample 1",
@@ -29,99 +30,58 @@ const Projects = () => {
       github_link: "https://github.com/",
     },
   ];
+
   return (
-    <>
-      <h3 className="text-center text-xl text-emerald-500 pt-4">Projects</h3>
-      <div className="md:mx-36">
-        <div className="grid grid-cols-1 md:grid-cols-3">
-          <div className="bg-stone-200 p-4 rounded shadow m-4 hover:scale-105 transition ">
-            <div className="pb-2">
-              <img className="rounded" src={Img1} alt="" />
+    <section className="px-6 py-12 md:px-16 lg:px-24 max-w-7xl mx-auto bg-transparent">
+      <h2 className="text-4xl sm:text-5xl font-bold text-center tracking-tight text-stone-900 mb-8">
+        Contact Me
+      </h2>
+      <div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {projects.map((item, idx) => (
+            <div
+              key={idx}
+              className="bg-white/80 backdrop-blur-xl border border-stone-200/80 p-5 rounded-[2rem] shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col justify-between"
+            >
+              <div>
+                <div className="pb-2">
+                  <img
+                    className="rounded-xl w-full h-36 object-cover"
+                    src={Img1}
+                    alt=""
+                  />
+                </div>
+                <h5 className="font-semibold text-stone-900 text-base mb-1">
+                  {item.name}
+                </h5>
+                <p className="text-sm text-stone-600 mb-3">
+                  {item.description}
+                </p>
+              </div>
+              <div className="flex gap-2 pt-2">
+                <a
+                  href={item.live_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-2.5 py-1 shadow-sm rounded-lg bg-stone-100 hover:bg-white text-stone-700 inline-block text-xs"
+                >
+                  <FontAwesomeIcon icon={faLink} />
+                </a>
+                <a
+                  href={item.github_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-2.5 py-1 shadow-sm rounded-lg bg-stone-100 hover:bg-white text-stone-700 text-xs"
+                >
+                  <FontAwesomeIcon icon={faGithubSquare} />
+                </a>
+              </div>
             </div>
-            <div>
-              <h5>Title</h5>
-              <h3>Description</h3>
-              <button
-                type="button"
-                className="px-2 shadow-xl p-1 rounded bg-stone-100 "
-              >
-                <FontAwesomeIcon icon={faLink} />
-              </button>
-              <button
-                type="button"
-                className="ms-2 px-2 shadow-xl p-1 rounded bg-stone-100 "
-              >
-                <FontAwesomeIcon icon={faGithubSquare} />
-              </button>
-            </div>
-          </div>
-          <div className="bg-stone-200 p-4 rounded shadow m-4 hover:scale-105 transition ">
-            <div className="pb-2">
-              <img className="rounded" src={Img1} alt="" />
-            </div>
-            <div>
-              <h5>Title</h5>
-              <h3>Description</h3>
-              <button
-                type="button"
-                className="px-2 shadow-xl p-1 rounded bg-stone-100 "
-              >
-                <FontAwesomeIcon icon={faLink} />
-              </button>
-              <button
-                type="button"
-                className="ms-2 px-2 shadow-xl p-1 rounded bg-stone-100 "
-              >
-                <FontAwesomeIcon icon={faGithubSquare} />
-              </button>
-            </div>
-          </div>
-          <div className="bg-stone-200 p-4 rounded shadow m-4 hover:scale-105 transition ">
-            <div className="pb-2">
-              <img className="rounded" src={Img1} alt="" />
-            </div>
-            <div>
-              <h5>Title</h5>
-              <h3>Description</h3>
-              <button
-                type="button"
-                className="px-2 shadow-xl p-1 rounded bg-stone-100 "
-              >
-                <FontAwesomeIcon icon={faLink} />
-              </button>
-              <button
-                type="button"
-                className="ms-2 px-2 shadow-xl p-1 rounded bg-stone-100 "
-              >
-                <FontAwesomeIcon icon={faGithubSquare} />
-              </button>
-            </div>
-          </div>
-          <div className="bg-stone-200 p-4 rounded shadow m-4 hover:scale-105 transition ">
-            <div className="pb-2">
-              <img className="rounded" src={Img1} alt="" />
-            </div>
-            <div>
-              <h5>Title</h5>
-              <h3>Description</h3>
-              <button
-                type="button"
-                className="px-2 shadow-xl p-1 rounded bg-stone-100 "
-              >
-                <FontAwesomeIcon icon={faLink} />
-              </button>
-              <button
-                type="button"
-                className="ms-2 px-2 shadow-xl p-1 rounded bg-stone-100 "
-              >
-                <FontAwesomeIcon icon={faGithubSquare} />
-              </button>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
-export default Projects;
+export default Contact;

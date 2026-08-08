@@ -14,12 +14,12 @@ const Header = () => {
       const sections = [
         "home",
         "about",
-        "experience",
         "skills",
+        "experience",
         "projects",
         "contact",
       ];
-      const scrollPosition = window.scrollY + 120;
+      const scrollPosition = window.scrollY + 140;
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = document.getElementById(sections[i]);
@@ -47,170 +47,85 @@ const Header = () => {
     }
   };
 
+  const navItems = [
+    { id: "home", label: "Home" },
+    { id: "about", label: "About" },
+    { id: "skills", label: "Skills" },
+    { id: "experience", label: "Experience" },
+    { id: "projects", label: "Projects" },
+    { id: "contact", label: "Contact" },
+  ];
+
   return (
-    <div className="sticky top-0 left-0 right-0 z-50 bg-stone-200/90 backdrop-blur-md px-6">
-      <div className="flex justify-between py-4">
-        <div id="brand" className="text-2xl font-bold">
+    <header className="sticky top-4 z-50 px-4 w-full flex justify-center">
+      <nav className="bg-white/85 backdrop-blur-xl border border-stone-200/80 shadow-lg shadow-stone-900/5 rounded-full px-4 sm:px-6 py-2 flex items-center justify-between gap-4 md:gap-8 transition-all">
+        <div
+          id="brand"
+          className="text-lg font-bold text-stone-900 px-2 cursor-pointer"
+          onClick={(e) => scrollToSection(e, "home")}
+        >
           Portfolio
         </div>
 
-        <ul className="hidden md:flex space-x-6 absolute left-1/2 -translate-x-1/2">
-          <li>
-            <a
-              href="#home"
-              onClick={(e) => scrollToSection(e, "home")}
-              className={`relative ${
-                activeSection === "home" ? "text-emerald-500" : ""
-              }`}
-            >
-              Home
-              {activeSection === "home" && (
-                <span className="absolute left-0 bottom-0 w-6 border-b-2 border-emerald-500"></span>
-              )}
-            </a>
-          </li>
-          <li>
-            <a
-              href="#about"
-              onClick={(e) => scrollToSection(e, "about")}
-              className={`relative ${
-                activeSection === "about" ? "text-emerald-500" : ""
-              }`}
-            >
-              About Me
-              {activeSection === "about" && (
-                <span className="absolute left-0 bottom-0 w-6 border-b-2 border-emerald-500"></span>
-              )}
-            </a>
-          </li>
-          <li>
-            <a
-              href="#skills"
-              onClick={(e) => scrollToSection(e, "skills")}
-              className={`relative ${
-                activeSection === "skills" ? "text-emerald-500" : ""
-              }`}
-            >
-              Skills
-              {activeSection === "skills" && (
-                <span className="absolute left-0 bottom-0 w-6 border-b-2 border-emerald-500"></span>
-              )}
-            </a>
-          </li>
-          <li>
-            <a
-              href="#projects"
-              onClick={(e) => scrollToSection(e, "projects")}
-              className={`relative ${
-                activeSection === "projects" ? "text-emerald-500" : ""
-              }`}
-            >
-              Projects
-              {activeSection === "projects" && (
-                <span className="absolute left-0 bottom-0 w-6 border-b-2 border-emerald-500"></span>
-              )}
-            </a>
-          </li>
-          <li>
-            <a
-              href="#contact"
-              onClick={(e) => scrollToSection(e, "contact")}
-              className={`relative ${
-                activeSection === "contact" ? "text-emerald-500" : ""
-              }`}
-            >
-              Contact Me
-              {activeSection === "contact" && (
-                <span className="absolute left-0 bottom-0 w-6 border-b-2 border-emerald-500"></span>
-              )}
-            </a>
-          </li>
+        <ul className="hidden md:flex items-center space-x-1 sm:space-x-2">
+          {navItems.map((item) => (
+            <li key={item.id}>
+              <a
+                href={`#${item.id}`}
+                onClick={(e) => scrollToSection(e, item.id)}
+                className={`inline-block px-4 py-1.5 rounded-full text-sm transition-all duration-300 ${
+                  activeSection === item.id
+                    ? "bg-stone-200/90 font-semibold text-stone-900 shadow-sm"
+                    : "text-stone-600 font-medium hover:text-stone-900 hover:bg-stone-100/60"
+                }`}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
         </ul>
 
-        {/* Mobile  */}
+        {/* Mobile menu button */}
         <div className="md:hidden">
-          <button onClick={toggleMenu}>
-            <FontAwesomeIcon icon={isOpen ? faX : faBars} />
+          <button
+            onClick={toggleMenu}
+            className="w-8 h-8 flex items-center justify-center rounded-full bg-stone-100 text-stone-700 hover:bg-stone-200 transition"
+          >
+            <FontAwesomeIcon icon={isOpen ? faX : faBars} className="text-sm" />
           </button>
         </div>
-      </div>
+      </nav>
 
-      {/* Mobile menu */}
+      {/* Mobile dropdown menu */}
       {isOpen && (
-        <>
+        <div className="absolute top-14 left-4 right-4 md:hidden">
           <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            className="bg-white/95 backdrop-blur-xl rounded-3xl border border-stone-200/80 p-4 shadow-xl flex flex-col space-y-2 text-center"
           >
-            <div className="md:hidden flex flex-col items-center bg-stone-200 py-4 space-y-4 text-sm font-medium">
-              <>
-                <a
-                  href="#home"
-                  className={`relative ${
-                    activeSection === "home" ? "text-emerald-500" : ""
-                  }`}
-                  onClick={(e) => {
-                    scrollToSection(e, "home");
-                    toggleMenu();
-                  }}
-                >
-                  Home
-                </a>
-                <a
-                  href="#about"
-                  className={`relative ${
-                    activeSection === "about" ? "text-emerald-500" : ""
-                  }`}
-                  onClick={(e) => {
-                    scrollToSection(e, "about");
-                    toggleMenu();
-                  }}
-                >
-                  About Me
-                </a>
-                <a
-                  href="#skills"
-                  className={`relative ${
-                    activeSection === "skills" ? "text-emerald-500" : ""
-                  }`}
-                  onClick={(e) => {
-                    scrollToSection(e, "skills");
-                    toggleMenu();
-                  }}
-                >
-                  Skills
-                </a>
-                <a
-                  href="#projects"
-                  className={`relative ${
-                    activeSection === "projects" ? "text-emerald-500" : ""
-                  }`}
-                  onClick={(e) => {
-                    scrollToSection(e, "projects");
-                    toggleMenu();
-                  }}
-                >
-                  Projects
-                </a>
-                <a
-                  href="#contact"
-                  className={`relative ${
-                    activeSection === "contact" ? "text-emerald-500" : ""
-                  }`}
-                  onClick={(e) => {
-                    scrollToSection(e, "contact");
-                    toggleMenu();
-                  }}
-                >
-                  Contact
-                </a>
-              </>
-            </div>
+            {navItems.map((item) => (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                className={`py-2 px-4 rounded-full text-sm font-medium transition ${
+                  activeSection === item.id
+                    ? "bg-stone-200/90 text-stone-900 font-semibold"
+                    : "text-stone-600 hover:bg-stone-100"
+                }`}
+                onClick={(e) => {
+                  scrollToSection(e, item.id);
+                  setIsOpen(false);
+                }}
+              >
+                {item.label}
+              </a>
+            ))}
           </motion.div>
-        </>
+        </div>
       )}
-    </div>
+    </header>
   );
 };
 

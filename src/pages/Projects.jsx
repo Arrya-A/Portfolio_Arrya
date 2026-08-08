@@ -215,12 +215,17 @@ const Projects = () => {
     },
   ];
   return (
-    <>
-      <h3 className="text-center text-xl text-emerald-500 pt-4">Projects</h3>
-      <div className="md:mx-36">
-        <div className="grid grid-cols-1 md:grid-cols-3">
-          {projects.map((project) => (
-            <div className="bg-stone-200 p-4 rounded shadow m-4 hover:scale-105 transition ">
+    <section className="px-6 py-12 md:px-16 lg:px-24 max-w-7xl mx-auto bg-transparent">
+      <h2 className="text-4xl sm:text-5xl font-bold text-center tracking-tight text-stone-900 mb-8">
+        Projects
+      </h2>
+      <div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project, idx) => (
+            <div
+              key={idx}
+              className="bg-white/80 backdrop-blur-xl border border-stone-200/80 p-5 rounded-[2rem] shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col justify-between"
+            >
               <div className="pb-2">
                 <img className="rounded" src={project?.image} alt="" />
               </div>
@@ -258,7 +263,7 @@ const Projects = () => {
           ))}
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
