@@ -16,7 +16,7 @@ const Projects = () => {
     {
       name: "Portfolio",
       description:
-        "Lorem ipsum dolor sit amet ffsd consectetur, adipisicing elit",
+        "Personal developer portfolio website showcasing projects, skills, and experience.",
       live_link: "https://arrya-a.github.io/portfolio/",
       github_link: "https://github.com/Arrya-A/portfolio",
       image: portfolio,
@@ -34,7 +34,7 @@ const Projects = () => {
     {
       name: "Adventour",
       description:
-        "Lorem ipsum dolor sit ametdsf consectetur, adipisicing elit",
+        "A modern travel and adventure tour website.",
       live_link: "https://arrya-a.github.io/Travel_Website/",
       github_link: "https://github.com/Arrya-A/Travel_Website",
       image: adventour,
@@ -76,7 +76,7 @@ const Projects = () => {
     // },
     {
       name: "Google Meet Clone",
-      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+      description: "A responsive UI clone of Google Meet built with React and Bootstrap.",
       live_link: "https://react-google-meet-clone.vercel.app/",
       github_link: "https://github.com/Arrya-A/React_Google_Meet_Clone",
       image: clone,
@@ -94,7 +94,7 @@ const Projects = () => {
     //////////////////////////////////////////////////////////////////////////////////
     {
       name: "Media Player",
-      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+      description: "A web application for uploading, managing, and playing video media content.",
       live_link: "https://media-player-frontend-pink-five.vercel.app/",
       github_link: "https://github.com/Arrya-A/MediaPlayer_Frontend",
       image: mp,
@@ -110,7 +110,7 @@ const Projects = () => {
     // },
     {
       name: "E-Cart",
-      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+      description: "An e-commerce shopping cart web application built with React and Redux Toolkit.",
       live_link: "https://e-cart-redux-six-lime.vercel.app/",
       github_link: "https://github.com/Arrya-A/e-cart_Redux",
       image: ekart,
@@ -118,7 +118,7 @@ const Projects = () => {
     },
     {
       name: "Project Fair",
-      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+      description: "A full-stack MERN platform to showcase, upload, and discover web projects.",
       live_link: "https://project-fair-frontend-two-alpha.vercel.app/",
       github_link: "https://github.com/Arrya-A/Project_Fair_Frontend",
       image: pf,
@@ -134,7 +134,7 @@ const Projects = () => {
     // },
     {
       name: "Weather Application",
-      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+      description: "Real-time weather forecast application retrieving dynamic weather data via APIs.",
       live_link: "https://arrya-a.github.io/Weather_App/",
       github_link: "https://github.com/Arrya-A/Weather_App",
       image: weather,
@@ -182,7 +182,7 @@ const Projects = () => {
     // },
     {
       name: "GadgetHub",
-      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+      description: "An online gadget store web app built with React and external product APIs demostrating CRUD.",
       live_link: "https://gadget-hub-frontend-react-api.vercel.app/",
       github_link: "https://github.com/Arrya-A/GadgetHub_Frontend-ReactAPI",
       image: gadgethub,
@@ -190,7 +190,7 @@ const Projects = () => {
     },
     {
       name: "Recipe Book",
-      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+      description: "Interactive recipe search and bookmarking application.",
       live_link: "https://recipe-search-redux.vercel.app/",
       github_link: "https://github.com/Arrya-A/RecipeSearch-Redux",
       image: recipebook,
