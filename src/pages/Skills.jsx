@@ -30,7 +30,6 @@ const Skills = () => {
           Skills
         </h2>
 
-        {/* Main Card Container */}
         <div className="bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl border border-stone-200/80 dark:border-stone-800 rounded-[2rem] p-8 sm:p-12 shadow-sm text-center">
           <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
             {skillsList.map((skill, index) => (

@@ -59,11 +59,9 @@ const Experience = () => {
           </p>
         </div>
 
-        {/* Chronological Timeline Container */}
         <div className="relative pl-6 md:pl-10 border-l-2 border-emerald-300/60 dark:border-emerald-800/80 space-y-8">
           {experiences.map((item, index) => (
             <div key={index} className="relative">
-              {/* Timeline Node Icon */}
               <div
                 className={`absolute -left-[45px] md:-left-[61px] top-4 w-10 h-10 rounded-full flex items-center justify-center shadow-md ring-4 ring-white dark:ring-stone-950 ${
                   item.color === "emerald"
@@ -74,7 +72,6 @@ const Experience = () => {
                 <FontAwesomeIcon icon={item.icon} className="text-sm" />
               </div>
 
-              {/* Milestone Card */}
               <div className="bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl border border-stone-200/80 dark:border-stone-800 rounded-[2rem] p-6 sm:p-7 shadow-sm hover:shadow-md hover:-translate-y-1 transition duration-300 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="space-y-1">
                   <div className="flex flex-wrap items-center gap-2">

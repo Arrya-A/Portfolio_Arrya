@@ -13,7 +13,6 @@ const About = () => {
           About Me
         </h2>
 
-        {/* Metric Cards Row */}
         <div className="grid gap-4 sm:grid-cols-2">
           <div className="bg-white/80 dark:bg-stone-900/80 backdrop-blur-xl border border-stone-200/80 dark:border-stone-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition duration-300">
             <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 mb-3 text-xs font-semibold uppercase tracking-widest">
@@ -42,7 +41,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Main Content Card */}
         <div className="rounded-[2rem] border border-stone-200/80 dark:border-stone-800 bg-white/80 dark:bg-stone-900/80 p-8 md:p-12 shadow-sm backdrop-blur-xl space-y-6">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight text-stone-900 dark:text-stone-100">
             Crafting polished web experiences with design-led React development.

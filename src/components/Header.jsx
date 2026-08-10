@@ -87,9 +87,7 @@ const Header = () => {
           ))}
         </ul>
 
-        {/* Right controls: Theme toggle & Mobile menu button */}
         <div className="flex items-center gap-2">
-          {/* Dark/Light Mode Toggle Button */}
           <button
             onClick={toggleTheme}
             aria-label="Toggle theme"
@@ -102,7 +100,6 @@ const Header = () => {
             />
           </button>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
@@ -117,7 +114,6 @@ const Header = () => {
         </div>
       </nav>
 
-      {/* Mobile dropdown menu */}
       {isOpen && (
         <div className="absolute top-14 left-4 right-4 md:hidden">
           <motion.div
