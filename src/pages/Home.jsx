@@ -1,4 +1,5 @@
 import React from "react";
+import resumePdf from "../assets/images/Arrya_A_Resume.pdf";
 
 const Home = () => {
   return (
@@ -31,8 +32,8 @@ const Home = () => {
           <div className="flex flex-wrap justify-center gap-4 pt-4">
             <a
               className="rounded-full bg-emerald-600 dark:bg-emerald-600 px-7 py-3 text-base font-semibold text-white shadow-lg shadow-emerald-600/20 transition duration-300 hover:-translate-y-0.5 hover:bg-emerald-700 dark:hover:bg-emerald-500 hover:shadow-xl hover:shadow-emerald-600/30"
-              href="../assets/images/Arrya_Resume.pdf"
-              download
+              href={resumePdf}
+              download="Arrya_A_Resume.pdf"
             >
               Download CV
             </a>
