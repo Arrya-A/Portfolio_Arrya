@@ -2,7 +2,14 @@ import { faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import portfolio from "../assets/images/Portfolio.png";
-import Img2 from "../assets/images/clone.png";
+import clone from "../assets/images/clone.png";
+import adventour from "../assets/images/Adventour.png";
+import ekart from "../assets/images/e-kart.png";
+import mp from "../assets/images/Media_Player.png";
+import pf from "../assets/images/project_fair.png";
+import recipebook from "../assets/images/recipebook.png";
+import weather from "../assets/images/weather_app.png";
+import gadgethub from "../assets/images/gadgethub.png";
 
 const Projects = () => {
   const projects = [
@@ -15,74 +22,74 @@ const Projects = () => {
       image: portfolio,
       tech_stack: ["HTML", "CSS"],
     },
-    {
-      name: "Restaurant App",
-      description:
-        "Lorem ipsum dolor sit amet ffsd consectetur, adipisicing elit",
-      live_link: "https://arrya-a.github.io/portfolio/",
-      github_link: "https://github.com/Arrya-A/portfolio",
-      image: portfolio,
-      tech_stack: ["HTML", "CSS"],
-    },
+    // {
+    //   name: "Restaurant App",
+    //   description:
+    //     "Lorem ipsum dolor sit amet ffsd consectetur, adipisicing elit",
+    //   live_link: "https://arrya-a.github.io/portfolio/",
+    //   github_link: "https://github.com/Arrya-A/portfolio",
+    //   image: portfolio,
+    //   tech_stack: ["HTML", "CSS"],
+    // },
     {
       name: "Adventour",
       description:
         "Lorem ipsum dolor sit ametdsf consectetur, adipisicing elit",
       live_link: "https://arrya-a.github.io/Travel_Website/",
       github_link: "https://github.com/Arrya-A/Travel_Website",
-      image: Img2,
+      image: adventour,
       tech_stack: ["HTML", "CSS"],
     },
-    {
-      name: "Clock",
-      description:
-        "Lorem ipsum dolor sit ametsf dfsd csdfonsectetur, adipisicing elit",
-      live_link: "https://arrya-a.github.io/Clock/",
-      github_link: "https://github.com/Arrya-A/Clock",
-      image: Img2,
-      tech_stack: ["HTML", "CSS"],
-    },
-    {
-      name: "Calculator",
-      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
-      live_link: "https://arrya-a.github.io/Calculator/",
-      github_link: "https://github.com/Arrya-A/Calculator",
-      image: Img2,
-      tech_stack: ["HTML", "CSS", "Javascript"],
-    },
-    {
-      name: "Simple Interest Calculator",
-      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
-      live_link: "https://simple-interest-calculator-six-alpha.vercel.app/",
-      github_link: "https://github.com/Arrya-A/Simple-_Interest_Calculator",
-      image: Img2,
-      tech_stack: ["HTML", "CSS", "Javascript"],
-    },
+    // {
+    //   name: "Clock",
+    //   description:
+    //     "Lorem ipsum dolor sit ametsf dfsd csdfonsectetur, adipisicing elit",
+    //   live_link: "https://arrya-a.github.io/Clock/",
+    //   github_link: "https://github.com/Arrya-A/Clock",
+    //   image: clone,
+    //   tech_stack: ["HTML", "CSS"],
+    // },
+    // {
+    //   name: "Calculator",
+    //   description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+    //   live_link: "https://arrya-a.github.io/Calculator/",
+    //   github_link: "https://github.com/Arrya-A/Calculator",
+    //   image: clone,
+    //   tech_stack: ["HTML", "CSS", "Javascript"],
+    // },
+    // {
+    //   name: "Simple Interest Calculator",
+    //   description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+    //   live_link: "https://simple-interest-calculator-six-alpha.vercel.app/",
+    //   github_link: "https://github.com/Arrya-A/Simple-_Interest_Calculator",
+    //   image: clone,
+    //   tech_stack: ["HTML", "CSS", "Javascript"],
+    // },
 
-    {
-      name: "BMI Calculator",
-      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
-      live_link: "https://arrya-a.github.io/Calculator/",
-      github_link: "https://github.com/Arrya-A/bmi_calculator",
-      image: Img2,
-      tech_stack: ["HTML", "CSS", "Javascript"],
-    },
+    // {
+    //   name: "BMI Calculator",
+    //   description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+    //   live_link: "https://arrya-a.github.io/Calculator/",
+    //   github_link: "https://github.com/Arrya-A/bmi_calculator",
+    //   image: clone,
+    //   tech_stack: ["HTML", "CSS", "Javascript"],
+    // },
     {
       name: "Google Meet Clone",
       description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
       live_link: "https://react-google-meet-clone.vercel.app/",
       github_link: "https://github.com/Arrya-A/React_Google_Meet_Clone",
-      image: Img2,
+      image: clone,
       tech_stack: ["React"],
     },
-    {
-      name: "Calculator - React",
-      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
-      live_link: "https://calculator-react-eta-seven.vercel.app/",
-      github_link: "https://github.com/Arrya-A/Calculator-React",
-      image: Img2,
-      tech_stack: ["React"],
-    },
+    // {
+    //   name: "Calculator - React",
+    //   description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+    //   live_link: "https://calculator-react-eta-seven.vercel.app/",
+    //   github_link: "https://github.com/Arrya-A/Calculator-React",
+    //   image: clone,
+    //   tech_stack: ["React"],
+    // },
 
     //////////////////////////////////////////////////////////////////////////////////
     {
@@ -90,23 +97,23 @@ const Projects = () => {
       description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
       live_link: "https://arrya-a.github.io/Calculator/",
       github_link: "https://github.com/Arrya-A/bmi_calculator",
-      image: Img2,
+      image: mp,
       tech_stack: ["React"],
     },
-    {
-      name: "Counter Application",
-      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
-      live_link: "https://arrya-a.github.io/Calculator/",
-      github_link: "https://github.com/Arrya-A/bmi_calculator",
-      image: Img2,
-      tech_stack: ["HTML", "CSS", "Javascript"],
-    },
+    // {
+    //   name: "Counter Application",
+    //   description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+    //   live_link: "https://arrya-a.github.io/Calculator/",
+    //   github_link: "https://github.com/Arrya-A/bmi_calculator",
+    //   image: Img2,
+    //   tech_stack: ["HTML", "CSS", "Javascript"],
+    // },
     {
       name: "E-Cart",
       description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
       live_link: "https://arrya-a.github.io/Calculator/",
       github_link: "https://github.com/Arrya-A/bmi_calculator",
-      image: Img2,
+      image: ekart,
       tech_stack: ["Redux"],
     },
     {
@@ -114,71 +121,71 @@ const Projects = () => {
       description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
       live_link: "https://arrya-a.github.io/Calculator/",
       github_link: "https://github.com/Arrya-A/bmi_calculator",
-      image: Img2,
+      image: pf,
       tech_stack: ["MERN"],
     },
-    {
-      name: "Country Search",
-      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
-      live_link: "https://arrya-a.github.io/Calculator/",
-      github_link: "https://github.com/Arrya-A/bmi_calculator",
-      image: Img2,
-      tech_stack: ["HTML", "CSS", "Javascript", "API"],
-    },
+    // {
+    //   name: "Country Search",
+    //   description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+    //   live_link: "https://arrya-a.github.io/Calculator/",
+    //   github_link: "https://github.com/Arrya-A/bmi_calculator",
+    //   image: Img2,
+    //   tech_stack: ["HTML", "CSS", "Javascript", "API"],
+    // },
     {
       name: "Weather Application",
       description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
       live_link: "https://arrya-a.github.io/Calculator/",
       github_link: "https://github.com/Arrya-A/bmi_calculator",
-      image: Img2,
+      image: weather,
       tech_stack: ["HTML", "CSS", "Javascript", "API"],
     },
-    {
-      name: "Movie Search Application",
-      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
-      live_link: "https://arrya-a.github.io/Calculator/",
-      github_link: "https://github.com/Arrya-A/bmi_calculator",
-      image: Img2,
-      tech_stack: ["HTML", "CSS", "Javascript", "API"],
-    },
-    {
-      name: "Employee Management System",
-      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
-      live_link: "https://arrya-a.github.io/Calculator/",
-      github_link: "https://github.com/Arrya-A/bmi_calculator",
-      image: Img2,
-      tech_stack: [""],
-    },
-    {
-      name: "To-Do",
-      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
-      live_link: "https://arrya-a.github.io/Calculator/",
-      github_link: "https://github.com/Arrya-A/bmi_calculator",
-      image: Img2,
-      tech_stack: ["Redux"],
-    },
-    {
-      name: "Plant Sphere",
-      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
-      live_link: "https://arrya-a.github.io/Calculator/",
-      github_link: "https://github.com/Arrya-A/bmi_calculator",
-      image: Img2,
-      tech_stack: [" "],
-    },
-    {
-      name: "Quiz App",
-      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
-      live_link: "https://arrya-a.github.io/Calculator/",
-      github_link: "https://github.com/Arrya-A/bmi_calculator",
-      image: Img2,
-      tech_stack: ["React"],
-    },
+    // {
+    //   name: "Movie Search Application",
+    //   description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+    //   live_link: "https://arrya-a.github.io/Calculator/",
+    //   github_link: "https://github.com/Arrya-A/bmi_calculator",
+    //   image: Img2,
+    //   tech_stack: ["HTML", "CSS", "Javascript", "API"],
+    // },
+    // {
+    //   name: "Employee Management System",
+    //   description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+    //   live_link: "https://arrya-a.github.io/Calculator/",
+    //   github_link: "https://github.com/Arrya-A/bmi_calculator",
+    //   image: Img2,
+    //   tech_stack: [""],
+    // },
+    // {
+    //   name: "To-Do",
+    //   description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+    //   live_link: "https://arrya-a.github.io/Calculator/",
+    //   github_link: "https://github.com/Arrya-A/bmi_calculator",
+    //   image: Img2,
+    //   tech_stack: ["Redux"],
+    // },
+    // {
+    //   name: "Plant Sphere",
+    //   description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+    //   live_link: "https://arrya-a.github.io/Calculator/",
+    //   github_link: "https://github.com/Arrya-A/bmi_calculator",
+    //   image: Img2,
+    //   tech_stack: [" "],
+    // },
+    // {
+    //   name: "Quiz App",
+    //   description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+    //   live_link: "https://arrya-a.github.io/Calculator/",
+    //   github_link: "https://github.com/Arrya-A/bmi_calculator",
+    //   image: Img2,
+    //   tech_stack: ["React"],
+    // },
     {
       name: "GadgetHub",
       description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
       live_link: "https://arrya-a.github.io/Calculator/",
       github_link: "https://github.com/Arrya-A/bmi_calculator",
-      image: Img2,
+      image: gadgethub,
       tech_stack: ["React"],
     },
     {
@@ -186,33 +193,33 @@ const Projects = () => {
       description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
       live_link: "https://arrya-a.github.io/Calculator/",
       github_link: "https://github.com/Arrya-A/bmi_calculator",
-      image: Img2,
+      image: recipebook,
       tech_stack: ["Redux"],
     },
-    {
-      name: "User Management App",
-      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
-      live_link: "https://arrya-a.github.io/Calculator/",
-      github_link: "https://github.com/Arrya-A/bmi_calculator",
-      image: Img2,
-      tech_stack: [" "],
-    },
-    {
-      name: "Student Management App",
-      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
-      live_link: "https://arrya-a.github.io/Calculator/",
-      github_link: "https://github.com/Arrya-A/bmi_calculator",
-      image: Img2,
-      tech_stack: [" "],
-    },
-    {
-      name: "Webpage",
-      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
-      live_link: "https://arrya-a.github.io/Calculator/",
-      github_link: "https://github.com/Arrya-A/bmi_calculator",
-      image: Img2,
-      tech_stack: ["Tailwind"],
-    },
+    // {
+    //   name: "User Management App",
+    //   description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+    //   live_link: "https://arrya-a.github.io/Calculator/",
+    //   github_link: "https://github.com/Arrya-A/bmi_calculator",
+    //   image: Img2,
+    //   tech_stack: [" "],
+    // },
+    // {
+    //   name: "Student Management App",
+    //   description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+    //   live_link: "https://arrya-a.github.io/Calculator/",
+    //   github_link: "https://github.com/Arrya-A/bmi_calculator",
+    //   image: Img2,
+    //   tech_stack: [" "],
+    // },
+    // {
+    //   name: "Webpage",
+    //   description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit",
+    //   live_link: "https://arrya-a.github.io/Calculator/",
+    //   github_link: "https://github.com/Arrya-A/bmi_calculator",
+    //   image: Img2,
+    //   tech_stack: ["Tailwind"],
+    // },
   ];
   return (
     <section className="px-6 py-12 md:px-16 lg:px-24 max-w-7xl mx-auto bg-transparent">
