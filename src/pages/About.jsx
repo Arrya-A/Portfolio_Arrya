@@ -20,7 +20,7 @@ const About = () => {
               <span>EXPERIENCE</span>
             </div>
             <p className="text-3xl font-bold text-stone-900 dark:text-stone-100">
-              1.5+
+              2+
             </p>
             <p className="text-sm text-stone-600 dark:text-stone-400 mt-1">
               Years crafting frontend apps
