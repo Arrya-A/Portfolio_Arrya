@@ -32,7 +32,7 @@ const Home = () => {
             <a
               className="rounded-full bg-emerald-600 dark:bg-emerald-600 px-7 py-3 text-base font-semibold text-white shadow-lg shadow-emerald-600/20 transition duration-300 hover:-translate-y-0.5 hover:bg-emerald-700 dark:hover:bg-emerald-500 hover:shadow-xl hover:shadow-emerald-600/30"
               href={resumePdf}
-              download="Arrya_A_Resume.pdf"
+              download="Arrya_Resume.pdf"
             >
               Download CV
             </a>
