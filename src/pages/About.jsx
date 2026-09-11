@@ -20,10 +20,10 @@ const About = () => {
               <span>EXPERIENCE</span>
             </div>
             <p className="text-3xl font-bold text-stone-900 dark:text-stone-100">
-              2+
+              2+ Years
             </p>
             <p className="text-sm text-stone-600 dark:text-stone-400 mt-1">
-              Years crafting frontend apps
+              as React Developer
             </p>
           </div>
 
@@ -43,14 +43,16 @@ const About = () => {
 
         <div className="rounded-[2rem] border border-stone-200/80 dark:border-stone-800 bg-white/80 dark:bg-stone-900/80 p-8 md:p-12 shadow-sm backdrop-blur-xl space-y-6">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight text-stone-900 dark:text-stone-100">
-            Crafting polished web experiences with design-led React development.
+            React Developer with 2+ years of experience building responsive web
+            applications.
           </h1>
           <div className="border-t border-stone-200/60 dark:border-stone-800 pt-6">
             <p className="text-base sm:text-lg leading-relaxed text-stone-600 dark:text-stone-300">
-              I am a frontend developer with 1.5+ years of experience building
-              modern, responsive applications using React, Tailwind CSS, and the
-              MERN stack. My focus is on clean UI, fast interactions, and
-              delivering thoughtful digital products.
+              I build responsive and user-friendly web applications using React,
+              JavaScript, Tailwind CSS, Bootstrap, Material UI, Node.js,
+              Express.js, and MongoDB. I enjoy creating reusable components,
+              integrating APIs, and developing clean, maintainable interfaces
+              that provide a smooth user experience.
             </p>
           </div>
         </div>

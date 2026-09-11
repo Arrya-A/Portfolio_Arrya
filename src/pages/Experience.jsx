@@ -63,10 +63,11 @@ const Experience = () => {
           {experiences.map((item, index) => (
             <div key={index} className="relative">
               <div
-                className={`absolute -left-[45px] md:-left-[61px] top-4 w-10 h-10 rounded-full flex items-center justify-center shadow-md ring-4 ring-white dark:ring-stone-950 ${item.color === "emerald"
+                className={`absolute -left-[45px] md:-left-[61px] top-4 w-10 h-10 rounded-full flex items-center justify-center shadow-md ring-4 ring-white dark:ring-stone-950 ${
+                  item.color === "emerald"
                     ? "bg-emerald-600 text-white"
                     : "bg-sky-600 text-white"
-                  }`}
+                }`}
               >
                 <FontAwesomeIcon icon={item.icon} className="text-sm" />
               </div>
@@ -78,10 +79,11 @@ const Experience = () => {
                       {item.role}
                     </h4>
                     <span
-                      className={`text-xs font-semibold px-2.5 py-0.5 rounded-full uppercase tracking-wider border ${item.color === "emerald"
+                      className={`text-xs font-semibold px-2.5 py-0.5 rounded-full uppercase tracking-wider border ${
+                        item.color === "emerald"
                           ? "bg-emerald-100/80 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800/80"
                           : "bg-sky-100/80 dark:bg-sky-950/80 text-sky-800 dark:text-sky-300 border-sky-200 dark:border-sky-800/80"
-                        }`}
+                      }`}
                     >
                       {item.type}
                     </span>

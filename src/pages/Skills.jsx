@@ -2,25 +2,26 @@ import React from "react";
 
 const Skills = () => {
   const skillsList = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "Bootstrap",
-    "Tailwind",
     "ReactJS",
+    "JavaScript",
+    "Tailwind CSS",
+    "Material UI",
+    "Bootstrap",
+    "HTML5",
+    "CSS3",
     "NodeJS",
     "ExpressJS",
     "MongoDB",
     "MySQL",
-    "MUI",
+    "REST API Integration",
+    "Figma-to-Code",
+    "Responsive Design",
     "VS Code",
     "Github",
-    "React Router",
     "Redux",
     "Axios",
-    "REST APIs",
-    "React Hook Form",
-    "Yup",
+    "Code Review",
+    "AI Assisted Development",
   ];
 
   return (
