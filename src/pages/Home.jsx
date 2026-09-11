@@ -1,5 +1,4 @@
-import React from "react";
-import resumePdf from "../assets/images/Arrya_A_Resume.pdf";
+import resumePdf from "../assets/images/Arrya_Resume.pdf";
 
 const Home = () => {
   return (
